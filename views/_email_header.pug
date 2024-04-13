@@ -1,0 +1,31 @@
+header.header
+    .header-group
+        .icons
+            button#header-menu.btn.header-menu.tooltip(data-info='Main menu')
+                img.btn-icon.btn-icon-alt(src='/app/assets/icons/menu_black_24dp.svg', alt='Main menu')
+        a.header-logo(href='#')
+            img(src='/app/assets/icons/logo_gmail_lockup_default_1x_r2.png', alt='Gmail')
+    form.header-search(action='')
+        .icons
+            button#js-header-search.btn.btn-nofill.tooltip(data-info='Search')
+                img.btn-icon.btn-icon-alt(src='/app/assets/icons/search_black_24dp.svg', alt='Search')
+        input.header-search-input(type='search', placeholder='Search mail')
+        .icons
+            button.btn(type='reset', data-info='Options')
+                img.btn-icon.btn-icon-alt(src='/app/assets/icons/clear_black_24dp.svg', alt='Options')
+        .icons
+            button#header-search-options.btn.tooltip(data-info='Options')
+                img.btn-icon.btn-icon-alt(src='/app/assets/icons/arrow_drop_down_black_24dp.svg', alt='Options')
+    .header-group.profile
+        .icons
+            button#header-info.btn
+                img.btn-icon.btn-icon-alt(src='/app/assets/icons/help_outline_black_24dp.svg', alt='Support')
+        .icons
+            button#header-settings.btn(data-info='Settings')
+                img.btn-icon.btn-icon-alt(src='/app/assets/icons/settings_black_24dp.svg', alt='Settings')
+        .icons
+            button#header-apps.btn
+                img.btn-icon.btn-icon-alt(src='/app/assets/icons/apps_black_24dp.svg', alt='Google apps')
+        .icons
+            button#header-profile.btn.tooltip
+                img.btn-icon.header-profile(src='/app/assets/img/profile.jpg')

@@ -1,0 +1,155 @@
+doctype html
+html(lang='en')
+  head
+    include _email_head
+  body
+    .body-wrapper
+      // HEADER
+      include _email_header
+      // LEFT SIDEBAR
+      include _email_sidebar    
+      // BODY
+      section.inbox
+        // MAIL
+        .inbox-menu
+          .inbox-menu-group
+            .inbox-btn-group
+              button.btn-alt
+                img.btn-icon-sm.btn-icon-alt.btn-icon-hover(src='/app/assets/icons/check_box_outline_blank_black_24dp.svg', alt='Select')
+              button.btn-sm.btn-alt
+                img.btn-icon-sm.btn-icon-alt.btn-icon-hover(src='/app/assets/icons/arrow_drop_down_black_24dp.svg', alt='Select')
+            button.btn
+              img.btn-icon.btn-icon-sm.btn-icon-alt.btn-icon-hover(src='/app/assets/icons/refresh_black_24dp.svg', alt='Refresh')
+            button.btn
+              img.btn-icon.btn-icon-sm.btn-icon-alt.btn-icon-hover(src='/app/assets/icons/more_vert_black_20dp.png', alt='More')
+          .inbox-menu-group
+            button.btn-lg.btn-alt
+              .inbox-menu-pagination
+                | 1-50 of 262
+            .inbox-menu-pagination-btn
+              button.btn.btn-nofill.btn-pagination
+                img.btn-icon-sm.btn-icon-alt(src='/app/assets/icons/chevron_left_black_24dp.svg', alt='Newer')
+              button.btn.btn-pagination
+                img.btn-icon-sm.btn-icon-alt.btn-icon-hover(src='/app/assets/icons/chevron_right_black_24dp.svg', alt='Older')
+            .inbox-btn-group
+              button.btn-alt
+                img.btn-icon-sm.btn-icon-alt(src='/app/assets/icons/keyboard_black_24dp.svg', alt='Input tools on/off')
+              button.btn-sm.btn-alt
+                img.btn-icon-sm.btn-icon-alt(src='/app/assets/icons/arrow_drop_down_black_24dp.svg', alt='Select input tool')
+        .inbox-container
+          .inbox-category
+            #ctg-primary.inbox-category-item.active
+              svg.inbox-category-icon.btn-icon.btn-icon-sm.btn-icon-alt.active(xmlns='http://www.w3.org/2000/svg', height='24px', viewBox='0 0 24 24', width='24px', fill='#000000')
+                path(d='M0 0h24v24H0V0z', fill='none')
+                path(d='M19 3H4.99c-1.11 0-1.98.89-1.98 2L3 19c0 1.1.88 2 1.99 2H19c1.1 0 2-.9 2-2V5c0-1.11-.9-2-2-2zm0 12h-4c0 1.66-1.35 3-3 3s-3-1.34-3-3H4.99V5H19v10z')
+              span.inbox-category-title Primary
+            .inbox-category-item
+              svg.inbox-category-icon.btn-icon.btn-icon-alt.btn-icon-sm(xmlns='http://www.w3.org/2000/svg', height='24px', viewBox='0 0 24 24', width='24px', fill='#000000')
+                path(d='M0 0h24v24H0z', fill='none')
+                path(d='M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z')
+              span.inbox-category-title Drafts
+            .inbox-category-item
+              svg.inbox-category-icon.btn-icon.btn-icon-alt.btn-icon-sm(xmlns='http://www.w3.org/2000/svg', height='24px', viewBox='0 0 24 24', width='24px', fill='#000000')
+                path(d='M0 0h24v24H0z', fill='none')
+                path(d='M21.41 11.58l-9-9C12.05 2.22 11.55 2 11 2H4c-1.1 0-2 .9-2 2v7c0 .55.22 1.05.59 1.42l9 9c.36.36.86.58 1.41.58.55 0 1.05-.22 1.41-.59l7-7c.37-.36.59-.86.59-1.41 0-.55-.23-1.06-.59-1.42zM5.5 7C4.67 7 4 6.33 4 5.5S4.67 4 5.5 4 7 4.67 7 5.5 6.33 7 5.5 7z')
+              span.inbox-category-title Spam
+          // MAIL CONTENT
+          .content
+            .mail
+              .inbox-message-item
+                .checkbox(style='margin-right: -12px;')
+                  button.btn
+                    img.btn-icon-sm.btn-icon-alt.btn-icon-hover.message-btn-icon(src='/app/assets/icons/check_box_outline_blank_black_24dp.svg', alt='Select')
+                .message-group-hidden
+                  button.btn-alt.btn-nofill.drag-indicator
+                    img.btn-icon-sm.btn-icon-alt.btn-icon-disabled(src='/app/assets/icons/drag_indicator_black_24dp.svg', alt='Drag')
+                button.btn.star(style='margin: 0;')
+                  img.btn-icon-sm.btn-icon-alt.btn-icon-hover.message-btn-icon(src='/app/assets/icons/star_border_black_24dp.svg', alt='Not starred')
+                .message-default
+                  .message-sender.message-content.unread
+                    span Cascadom
+                  .message-subject.message-content.unread
+                    span Dev Horror Stories: &#x1F47B; 2000 lines of inline styles
+                  .message-seperator.message-content  - 
+                  .message-body.message-content
+                    span
+                      | Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta error beatae optio ea, quod harum. Iure ab sed, dolores eos repudiandae inventore magnam id modi blanditiis harum at. Facere, exercitationem.
+                  .gap.message-content  &nbsp; 
+                  .message-date.center-text.unread
+                    span 12:09 AM
+                .message-group-hidden
+                  .inbox-message-item-options
+                    button.btn
+                      img.btn-icon-sm.btn-icon-alt.btn-icon-hover(src='/app/assets/icons/archive_black_24dp.svg', alt='Archive')
+                    button.btn
+                      img.btn-icon-sm.btn-icon-alt.btn-icon-hover(src='/app/assets/icons/delete_black_24dp.svg', alt='Delete')
+                    button.btn
+                      img.btn-icon-sm.btn-icon-alt.btn-icon-hover(src='/app/assets/icons/mark_as_unread_black_24dp.svg', alt='Mark as unread')
+                    button.btn
+                      img.btn-icon-sm.btn-icon-alt.btn-icon-hover(src='/app/assets/icons/access_time_filled_black_24dp.svg', alt='Snooze')
+              .inbox-message-item.message-default-unread
+                .checkbox(style='margin-right: -12px;')
+                  button.btn
+                    img.btn-icon-sm.btn-icon-alt.btn-icon-hover.message-btn-icon(src='/app/assets/icons/check_box_outline_blank_black_24dp.svg', alt='Select')
+                .message-group-hidden
+                  button.btn-alt.btn-nofill.drag-indicator
+                    img.btn-icon-sm.btn-icon-alt.btn-icon-disabled(src='/app/assets/icons/drag_indicator_black_24dp.svg', alt='Drag')
+                div
+                  button.btn.star(style='margin: 0;')
+                    img.btn-icon-sm.btn-icon-alt.btn-icon-hover.message-btn-icon(src='/app/assets/icons/star_border_black_24dp.svg', alt='Not starred')
+                .message-default
+                  .message-sender.message-content
+                    span Mr. President
+                  .message-subject.message-content
+                    span Thanks for Saving the World
+                  .message-seperator.message-content  - 
+                  .message-body.message-content
+                    span
+                      | Party at my crib next weekend, amet consectetur adipisicing elit. Soluta error beatae optio ea, quod harum. Iure ab sed, dolores eos repudiandae inventore magnam id modi blanditiis harum at. Facere, exercitationem.
+                  .gap.message-content  &nbsp; 
+                  .message-date.center-text
+                    span 4:23 PM
+                .message-group-hidden
+                  .inbox-message-item-options
+                    button.btn
+                      img.btn-icon-sm.btn-icon-alt.btn-icon-hover(src='/app/assets/icons/archive_black_24dp.svg', alt='Archive')
+                    button.btn
+                      img.btn-icon-sm.btn-icon-alt.btn-icon-hover(src='/app/assets/icons/delete_black_24dp.svg', alt='Delete')
+                    button.btn
+                      img.btn-icon-sm.btn-icon-alt.btn-icon-hover(src='/app/assets/icons/mark_as_unread_black_24dp.svg', alt='Mark as unread')
+                    button.btn
+                      img.btn-icon-sm.btn-icon-alt.btn-icon-hover(src='/app/assets/icons/access_time_filled_black_24dp.svg', alt='Snooze')
+              .inbox-message-item.message-default-unread
+                .checkbox(style='margin-right: -12px;')
+                  button.btn
+                    img.btn-icon-sm.btn-icon-alt.btn-icon-hover.message-btn-icon(src='/app/assets/icons/check_box_outline_blank_black_24dp.svg', alt='Select')
+                .message-group-hidden
+                  button.btn-alt.btn-nofill.drag-indicator
+                    img.btn-icon-sm.btn-icon-alt.btn-icon-disabled(src='/app/assets/icons/drag_indicator_black_24dp.svg', alt='Drag')
+                div
+                  button.btn.star(style='margin: 0;')
+                    img.btn-icon-sm.btn-icon-alt.btn-icon-hover.message-btn-icon(src='/app/assets/icons/star_border_black_24dp.svg', alt='Not starred')
+                .message-default
+                  .message-sender.message-content
+                    span Spotify
+                  .message-subject.message-content
+                    span &#x1F389; &#x1F4B0; New Job who this? 
+                  .message-seperator.message-content  - 
+                  .message-body.message-content
+                    span
+                      | Hello, Habib! We are glad to break the news to you, amet consectetur adipisicing elit. Soluta error beatae optio ea, quod harum. Iure ab sed, dolores eos repudiandae inventore magnam id modi blanditiis harum at. Facere, exercitationem.
+                  .gap.message-content  &nbsp; 
+                  .message-date.center-text
+                    span 2:01 PM
+                .message-group-hidden
+                  .inbox-message-item-options
+                    button.btn
+                      img.btn-icon-sm.btn-icon-alt.btn-icon-hover(src='/app/assets/icons/archive_black_24dp.svg', alt='Archive')
+                    button.btn
+                      img.btn-icon-sm.btn-icon-alt.btn-icon-hover(src='/app/assets/icons/delete_black_24dp.svg', alt='Delete')
+                    button.btn
+                      img.btn-icon-sm.btn-icon-alt.btn-icon-hover(src='/app/assets/icons/mark_as_unread_black_24dp.svg', alt='Mark as unread')
+                    button.btn
+                      img.btn-icon-sm.btn-icon-alt.btn-icon-hover(src='/app/assets/icons/access_time_filled_black_24dp.svg', alt='Snooze')
+            // FOOTER
+            include _email_footer
