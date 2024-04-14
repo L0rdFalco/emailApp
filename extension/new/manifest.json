@@ -1,6 +1,6 @@
 {
     "name": "email app",
-    "description": "email app clever description",
+    "description": "really clever description",
     "version": "0.0.0.1",
     "manifest_version": 3,
     "icons": {
@@ -24,24 +24,15 @@
             "256": "./res/icon256.png",
             "512": "./res/icon512.png"
         },
-        "default_title": "templ",
+        "default_title": "emailApp",
         "default_popup": "./popup/popup.html"
     },
     "options_page": "./options/options.html",
     "background": {
         "service_worker": "bg.js"
     },
-    "externally_connectable": {
-        "matches": [
-            "http://127.0.0.1/*",
-            "http://localhost/*"
-        ]
-    },
     "permissions": [
         "scripting",
         "storage"
-    ],
-    "host_permissions": [
-        "*://*/*"
     ]
 }

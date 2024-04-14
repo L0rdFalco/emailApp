@@ -1,4 +1,10 @@
-automate creation of multiple image designs for print on demand  
+email notifier
+1 connects to gmail, yahoomail outlook and yandex mail
+2 creates, reads, modifies and deletes emails
+3 schedules mails to be sent
+4 user can choose from pre selected templates to send out marketing emails
+5 turns received emails to voice notes for download or saving
+6 can send out typed emails as voice notes
 
 things to change for other SaaS apps:  
 
