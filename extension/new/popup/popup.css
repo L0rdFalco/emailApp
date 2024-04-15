@@ -12,7 +12,7 @@ body {
   /* color: #3b3b3b; */
   -webkit-font-smoothing: antialiased;
   font-smoothing: antialiased;
-  /* background: #2b2b2b; */
+  background: #F5F5F9;
 }
 @media screen and (max-width: 580px) {
   body {
@@ -28,7 +28,7 @@ body {
   justify-content: center;
   grid-template-columns: repeat(auto-fill, minmax(min(100%, 250px), 250px));
   background-color: #fff;
-  color: #444;
+  color: #696cff;
 }
 
 .container {
@@ -39,7 +39,7 @@ body {
 }
 
 .box {
-  background-color: #444;
+  background-color: #696cff;
   color: #fff;
   border-radius: 5px;
   padding: 10px;
@@ -96,7 +96,7 @@ a {
   justify-content: space-between;
   z-index: 100;
   cursor: pointer;
-  background: #444;
+  background: #696cff;
   transition: 0.5s;
   overflow: hidden;
 }
@@ -221,7 +221,7 @@ table th {
 }
 table td {
   vertical-align: middle;
-  background: #444;
+  background: #696cff;
   box-shadow: 0 3px 2px rgba(0, 0, 0, 0.08);
   transition: all 0.2s ease;
   font-size: 13px;
@@ -235,7 +235,7 @@ table td:first-child {
 }
 table tr:hover td {
   background-color: #0c0c0c;
-  color: #444;
+  color: #696cff;
 }
 
 
@@ -243,11 +243,14 @@ table tr:hover td {
   
 .email-wrapper {
   margin: 0 auto;
-  padding: 10px;
+  padding: 5px;
+  margin-bottom: 5px;
   max-width: 760px;
-  border:1px solid #444;
+  border:1px solid #a4a4a8;
   border-radius: 15px;
-  background-color: #eee8e8;
+  box-sizing: border-box;
+  background-color: #fff;
+  box-shadow: 2px 2px #c2c0c0;
 
   
 }
@@ -302,20 +305,30 @@ table tr:hover td {
 }
 .column-1 {
   background-color: #54B2B6;
+    border-radius: 5px;
+
 }
 .column-2 {
   background-color: #DB4251;
+    border-radius: 5px;
+
   
 }
 .column-3 {
   background-color: #8AAF6D;
+    border-radius: 5px;
+
 }
 .column-4 {
   background-color: #F5B939;
+    border-radius: 5px;
+
 }
 
 .column-10 {
   background-color: #259E78;
+    border-radius: 5px;
+
 }
 
 
@@ -355,9 +368,14 @@ table tr:hover td {
 
 .email-button {
   margin: 0 auto;
-  padding: 0;
+  margin-top: 4px;
+  margin-left: 4px;
+  padding: 1px;
   display: table-cell;
   vertical-align: middle;
+  color: #eeeff5;
+  background-color: green;
+  border-radius: 5px;
 }
 
 .email-par{
@@ -368,7 +386,14 @@ table tr:hover td {
 }
 
 .email-img {
-  /* padding-left: 30px; */
+  margin-left: 30px;
   width: 40px;
-  height: 40px;
+  height: 43px;
+  border-radius: 50%;
+}
+
+
+/*dont delete. used in listener*/
+.tabRow {
+
 }

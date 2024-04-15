@@ -66,7 +66,8 @@ function homeDOM() {
 }
 
 homeDOM()
-const reWriteDOM = function (provider) {
+
+const providerDOM = function (provider) {
 
     bodyEl.innerHTML = `
     <div class="sidebar">
@@ -122,7 +123,7 @@ const reWriteDOM = function (provider) {
                     <ion-icon name="log-out-outline"></ion-icon>
                 </span>
                 <span class="nav-item__text">
-                    compose
+                    reply
                 </span>
             </a>
         </li>
@@ -143,56 +144,56 @@ const reWriteDOM = function (provider) {
             </tr>
         </thead>
         <tbody>
-            <tr>
+            <tr class = "tabRow"  id="1">
                 <td width="20">1</td>
                 <td>Obcasyn Maruszczak</td>
                 <td><a href="#">obcasyn@example.com</a></td>
                 <td>0</td>
             </tr>
-            <tr>
+            <tr  class = "tabRow" id="2">
                 <td>2</td>
                 <td>Dżordż Roleks-Poteflon</td>
                 <td><a href="#">teflon@example.com</a></td>
                 <td>15</td>
             </tr>
-            <tr>
+            <tr class = "tabRow"  id="3">
                 <td>3</td>
                 <td>Klara Maruszczak</td>
                 <td><a href="#">klara@example.com</a></td>
                 <td>25</td>
             </tr>
-            <tr>
-                <td width="20">1</td>
+            <tr  class = "tabRow" id="4">
+                <td width="20">4</td>
                 <td>Obcasyn Maruszczak</td>
                 <td><a href="#">obcasyn@example.com</a></td>
                 <td>12</td>
             </tr>
-            <tr>
-                <td>2</td>
+            <tr  class = "tabRow" id="5">
+                <td>5</td>
                 <td>Dżordż Roleks-Poteflon</td>
                 <td><a href="#">teflon@example.com</a></td>
                 <td>7</td>
             </tr>
-            <tr>
-                <td>3</td>
+            <tr class = "tabRow"  id="6">
+                <td>6</td>
                 <td>Klara Maruszczak</td>
                 <td><a href="#">klara@example.com</a></td>
                 <td>3</td>
             </tr>
-            <tr>
-                <td width="20">1</td>
+            <tr  class = "tabRow" id="7">
+                <td width="20">7</td>
                 <td>Obcasyn Maruszczak</td>
                 <td><a href="#">obcasyn@example.com</a></td>
                 <td>12</td>
             </tr>
-            <tr>
-                <td>2</td>
+            <tr  class = "tabRow" id="8">
+                <td>8</td>
                 <td>Dżordż Roleks-Poteflon</td>
                 <td><a href="#">teflon@example.com</a></td>
                 <td>7</td>
             </tr>
-            <tr>
-                <td>3</td>
+            <tr  class = "tabRow" id="9">
+                <td>9</td>
                 <td>Klara Maruszczak</td>
                 <td><a href="#">klara@example.com</a></td>
                 <td>18</td>
@@ -205,16 +206,163 @@ const reWriteDOM = function (provider) {
 
 }
 
+const unredEmailsDOM = function (emailID) {
+
+    bodyEl.innerHTML = `
+    <div class="email-wrapper">
+
+
+    <div class="row">
+        <div class="column column-2">
+            <button class="email-button"> star</button>
+            <button class="email-button">see thread</button>
+
+        </div>
+        <div class="column column-4">
+
+            <p class="email-par">from:dfsdfsd@sdgfsdg.com</p>
+        </div>
+        <div class="column column-2">
+            <button class="email-button"> read</button>
+            <button class="email-button"> archive</button>
+        </div>
+        <div class="column column-3">
+            <button class="email-button">reply</button>
+            <button class="email-button">del</button>
+            <button class="email-button">12:12am</button>
+
+        </div>
+        <div class="column column-1">
+            <button class="email-button"> spam</button>
+
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="column column-2">
+            <img class="email-img" src="/res/icon64.png" alt="">
+        </div>
+        <div class="column column-10">
+
+            <p class="email-par">There is nothing more common than the wish to be remarkable There is nothing
+                more
+                common
+                than the
+                wish to be remarkable There is nothing more common than the wish to be remarkable</p>
+        </div>
+    </div>
+
+</div>
+
+<div class="email-wrapper">
+
+
+<div class="row">
+    <div class="column column-2">
+        <button class="email-button"> star</button>
+        <button class="email-button">see thread</button>
+
+    </div>
+    <div class="column column-4">
+
+        <p class="email-par">from:dfsdfsd@sdgfsdg.com</p>
+    </div>
+    <div class="column column-2">
+        <button class="email-button"> read</button>
+        <button class="email-button"> archive</button>
+    </div>
+    <div class="column column-3">
+        <button class="email-button">reply</button>
+        <button class="email-button">del</button>
+        <button class="email-button">12:12am</button>
+
+    </div>
+    <div class="column column-1">
+        <button class="email-button"> spam</button>
+
+    </div>
+</div>
+
+<div class="row">
+    <div class="column column-2">
+        <img class="email-img" src="/res/icon64.png" alt="">
+    </div>
+    <div class="column column-10">
+
+        <p class="email-par">There is nothing more common than the wish to be remarkable There is nothing
+            more
+            common
+            than the
+            wish to be remarkable There is nothing more common than the wish to be remarkable</p>
+    </div>
+</div>
+
+</div>
+<div class="email-wrapper">
+
+
+<div class="row">
+    <div class="column column-2">
+        <button class="email-button"> star</button>
+        <button class="email-button">see thread</button>
+
+    </div>
+    <div class="column column-4">
+
+        <p class="email-par">from:dfsdfsd@sdgfsdg.com</p>
+    </div>
+    <div class="column column-2">
+        <button class="email-button"> read</button>
+        <button class="email-button"> archive</button>
+    </div>
+    <div class="column column-3">
+        <button class="email-button">reply</button>
+        <button class="email-button">del</button>
+        <button class="email-button">12:12am</button>
+
+    </div>
+    <div class="column column-1">
+        <button class="email-button"> spam</button>
+
+    </div>
+</div>
+
+<div class="row">
+    <div class="column column-2">
+        <img class="email-img" src="/res/icon64.png" alt="">
+    </div>
+    <div class="column column-10">
+
+        <p class="email-par">There is nothing more common than the wish to be remarkable There is nothing
+            more
+            common
+            than the
+            wish to be remarkable There is nothing more common than the wish to be remarkable</p>
+    </div>
+</div>
+
+</div>
+    
+    `
+
+}
+
 
 document.addEventListener("click", function (e) {
     const homeBtn = document.getElementById("homeIcon")
-    const closestEl = e.target.closest(".box");
+    const closestProvEl = e.target.closest(".box");
+    const closetAccEl = e.target.closest(".tabRow")
 
-    if (closestEl && closestEl.id === "gmailCard") {
+    if (closestProvEl && closestProvEl.id === "gmailCard") {
 
-        reWriteDOM("gmail")
+        providerDOM("gmail")
 
     }
+
+    else if (closetAccEl) {
+        unredEmailsDOM(closetAccEl.id)
+    }
+
 
     else if (homeBtn) {
         homeDOM()
