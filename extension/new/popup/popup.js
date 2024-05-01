@@ -206,79 +206,34 @@ const providerDOM = function (provider) {
 
 }
 
-const unredEmailsDOM = function (emailID) {
+const unredEmailsDOM = function (accountID) {
 
     bodyEl.innerHTML = `
-    <div class="email-wrapper">
-
-
-    <div class="row">
-        <div class="column column-2">
-            <button class="email-button"> star</button>
-            <button class="email-button">see thread</button>
-
-        </div>
-        <div class="column column-4">
-
-            <p class="email-par">from:dfsdfsd@sdgfsdg.com</p>
-        </div>
-        <div class="column column-2">
-            <button class="email-button"> read</button>
-            <button class="email-button"> archive</button>
-        </div>
-        <div class="column column-3">
-            <button class="email-button">reply</button>
-            <button class="email-button">del</button>
-            <button class="email-button">12:12am</button>
-
-        </div>
-        <div class="column column-1">
-            <button class="email-button"> spam</button>
-
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="column column-2">
-            <img class="email-img" src="/res/icon64.png" alt="">
-        </div>
-        <div class="column column-10">
-
-            <p class="email-par">There is nothing more common than the wish to be remarkable There is nothing
-                more
-                common
-                than the
-                wish to be remarkable There is nothing more common than the wish to be remarkable</p>
-        </div>
-    </div>
-
-</div>
-
 <div class="email-wrapper">
 
 
 <div class="row">
     <div class="column column-2">
-        <button class="email-button"> star</button>
-        <button class="email-button">see thread</button>
+        <button class="email-button emailEl"> star</button>
+        <button class="email-button emailEl">see thread</button>
 
     </div>
     <div class="column column-4">
 
-        <p class="email-par">from:dfsdfsd@sdgfsdg.com</p>
+        <p class="email-par emailEl">from:dfsdfsd@sdgfsdg.com</p>
     </div>
     <div class="column column-2">
-        <button class="email-button"> read</button>
-        <button class="email-button"> archive</button>
+        <button class="email-button emailEl"> read</button>
+        <button class="email-button emailEl"> archive</button>
     </div>
     <div class="column column-3">
-        <button class="email-button">reply</button>
-        <button class="email-button">del</button>
-        <button class="email-button">12:12am</button>
+        <button class="email-button emailEl">reply</button>
+        <button class="email-button emailEl">del</button>
+        <button class="email-button emailEl">12:12am</button>
 
     </div>
     <div class="column column-1">
-        <button class="email-button"> spam</button>
+        <button class="email-button emailEl"> spam</button>
 
     </div>
 </div>
@@ -289,51 +244,7 @@ const unredEmailsDOM = function (emailID) {
     </div>
     <div class="column column-10">
 
-        <p class="email-par">There is nothing more common than the wish to be remarkable There is nothing
-            more
-            common
-            than the
-            wish to be remarkable There is nothing more common than the wish to be remarkable</p>
-    </div>
-</div>
-
-</div>
-<div class="email-wrapper">
-
-
-<div class="row">
-    <div class="column column-2">
-        <button class="email-button"> star</button>
-        <button class="email-button">see thread</button>
-
-    </div>
-    <div class="column column-4">
-
-        <p class="email-par">from:dfsdfsd@sdgfsdg.com</p>
-    </div>
-    <div class="column column-2">
-        <button class="email-button"> read</button>
-        <button class="email-button"> archive</button>
-    </div>
-    <div class="column column-3">
-        <button class="email-button">reply</button>
-        <button class="email-button">del</button>
-        <button class="email-button">12:12am</button>
-
-    </div>
-    <div class="column column-1">
-        <button class="email-button"> spam</button>
-
-    </div>
-</div>
-
-<div class="row">
-    <div class="column column-2">
-        <img class="email-img" src="/res/icon64.png" alt="">
-    </div>
-    <div class="column column-10">
-
-        <p class="email-par">There is nothing more common than the wish to be remarkable There is nothing
+        <p class="email-par emailEl">There is nothing more common than the wish to be remarkable There is nothing
             more
             common
             than the
@@ -352,6 +263,7 @@ document.addEventListener("click", function (e) {
     const homeBtn = document.getElementById("homeIcon")
     const closestProvEl = e.target.closest(".box");
     const closetAccEl = e.target.closest(".tabRow")
+    const closetEmailEl = e.target.closest(".emailEl")
 
     if (closestProvEl && closestProvEl.id === "gmailCard") {
 
@@ -361,6 +273,12 @@ document.addEventListener("click", function (e) {
 
     else if (closetAccEl) {
         unredEmailsDOM(closetAccEl.id)
+    }
+
+
+    else if (closetEmailEl) {
+        console.log(closetEmailEl);
+        //do something with the buttons clicked
     }
 
 
