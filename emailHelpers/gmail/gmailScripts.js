@@ -57,7 +57,7 @@ async function saveCredentials(client) {
  * Load or request or authorization to call APIs.
  *
  */
-async function authorize() {
+exports.authorize = async function () {
     let client = await loadSavedCredentialsIfExist();
     if (client) {
         return client;
@@ -72,53 +72,3 @@ async function authorize() {
     return client;
 }
 
-/**
- * Lists the labels in the user's account.
- *
- * @param {google.auth.OAuth2} auth An authorized OAuth2 client.
- */
-async function listLabels(auth) {
-    const gmail = google.gmail({ version: 'v1', auth });
-    const res = await gmail.users.labels.list({
-        userId: 'me',
-    });
-    const labels = res.data.labels;
-    if (!labels || labels.length === 0) {
-        console.log('No labels found.');
-        return;
-    }
-    console.log('Labels:');
-    labels.forEach((label) => {
-        console.log(`- ${label.name}`);
-    });
-}
-
-async function getLatestEmails(auth) {
-    const gmail = google.gmail({ version: "v1", auth })
-
-    const res = await gmail.users.messages.list({
-        userId: 'me',
-        maxResults: 10
-    });
-
-    const messages = res.data.messages;
-
-    // console.log(messages);
-
-    for (const message of messages) {
-        const msg = await gmail.users.messages.get({
-            userId: 'me',
-            id: message.id
-        });
-        console.log(msg.data.payload.body.data);
-        // console.log(`Subject: ${msg.data.subject}`);
-        break
-    }
-
-
-}
-
-
-
-// authorize().then(listLabels).catch(console.error);
-// authorize().then(getLatestEmails).catch(console.error);

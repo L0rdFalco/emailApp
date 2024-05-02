@@ -31,7 +31,7 @@ block content
                                         img(src='/assets/img/illustrations/man-with-laptop-light.png', height='140', alt='View Badge User', data-app-dark-img='illustrations/man-with-laptop-dark.png', data-app-light-img='illustrations/man-with-laptop-light.png')
                     .col-lg-4.col-md-4.order-1
                         .row
-                            .col-lg-6.col-md-12.col-6.mb-4
+                            .col-lg-6.col-md-12.col-6.mb-4#gmail
                                 .card
                                     .card-body
                                         .card-title.d-flex.align-items-start.justify-content-between
@@ -51,7 +51,7 @@ block content
                                         small.text-success.fw-semibold
                                             //- i.bx.bx-up-arrow-alt
                                             //- |  item b
-                            .col-lg-6.col-md-12.col-6.mb-4
+                            .col-lg-6.col-md-12.col-6.mb-4#yahoo
                                 .card
                                     .card-body
                                         .card-title.d-flex.align-items-start.justify-content-between
@@ -77,9 +77,9 @@ block content
                                 table.table
                                     thead
                                         tr
-                                            th url
-                                            th name
-                                            th host
+                                            th email
+                                            th sender name
+                                            th sender pic
                                             th Status
                                             th Actions
                                     tbody.table-border-bottom-0
@@ -87,18 +87,18 @@ block content
                                             td
                                                 i.fab.fa-angular.fa-lg.text-danger.me-3
                                                 |  
-                                                strong url 1
+                                                strong foo@example.com
                                             td name 1
                                             td
                                                 ul.list-unstyled.users-list.m-0.avatar-group.d-flex.align-items-center
                                                     li.avatar.avatar-xs.pull-up(data-bs-toggle='tooltip', data-popup='tooltip-custom', data-bs-placement='top', title='Lilian Fuller')
                                                         img.rounded-circle(src='/assets/img/avatars/5.png', alt='Avatar')
-                                                    li.avatar.avatar-xs.pull-up(data-bs-toggle='tooltip', data-popup='tooltip-custom', data-bs-placement='top', title='Sophia Wilkerson')
-                                                        img.rounded-circle(src='/assets/img/avatars/6.png', alt='Avatar')
-                                                    li.avatar.avatar-xs.pull-up(data-bs-toggle='tooltip', data-popup='tooltip-custom', data-bs-placement='top', title='Christina Parker')
-                                                        img.rounded-circle(src='/assets/img/avatars/7.png', alt='Avatar')
+                                                    //- li.avatar.avatar-xs.pull-up(data-bs-toggle='tooltip', data-popup='tooltip-custom', data-bs-placement='top', title='Sophia Wilkerson')
+                                                    //-     img.rounded-circle(src='/assets/img/avatars/6.png', alt='Avatar')
+                                                    //- li.avatar.avatar-xs.pull-up(data-bs-toggle='tooltip', data-popup='tooltip-custom', data-bs-placement='top', title='Christina Parker')
+                                                    //-     img.rounded-circle(src='/assets/img/avatars/7.png', alt='Avatar')
                                             td
-                                                span.badge.bg-label-primary.me-1 Active
+                                                span.badge.bg-label-primary.me-1 read
                                             td
                                                 .dropdown
                                                     button.btn.p-0.dropdown-toggle.hide-arrow(type='button', data-bs-toggle='dropdown')
@@ -107,14 +107,16 @@ block content
                                                         a.dropdown-item(href='javascript:void(0);')
                                                             i.bx.bx-edit-alt.me-1
                                                                 Edit
+                                                            | edit    
                                                         a.dropdown-item(href='javascript:void(0);')
                                                             i.bx.bx-trash.me-1
                                                                 Delete
+                                                            | delete    
                                         tr
                                             td
                                                 i.fab.fa-react.fa-lg.text-info.me-3
                                                 |  
-                                                strong url 2
+                                                strong foo@example.com 
                                             td name 2
                                             td
                                                 ul.list-unstyled.users-list.m-0.avatar-group.d-flex.align-items-center
@@ -125,7 +127,7 @@ block content
                                                     li.avatar.avatar-xs.pull-up(data-bs-toggle='tooltip', data-popup='tooltip-custom', data-bs-placement='top', title='Christina Parker')
                                                         img.rounded-circle(src='/assets/img/avatars/7.png', alt='Avatar')
                                             td
-                                                span.badge.bg-label-success.me-1 Completed
+                                                span.badge.bg-label-success.me-1 unread
                                             td
                                                 .dropdown
                                                     button.btn.p-0.dropdown-toggle.hide-arrow(type='button', data-bs-toggle='dropdown')
@@ -141,7 +143,7 @@ block content
                                             td
                                                 i.fab.fa-vuejs.fa-lg.text-success.me-3
                                                 |  
-                                                strong url 3
+                                                strong foo@example.com
                                             td name 3
                                             td
                                                 ul.list-unstyled.users-list.m-0.avatar-group.d-flex.align-items-center
@@ -152,7 +154,7 @@ block content
                                                     li.avatar.avatar-xs.pull-up(data-bs-toggle='tooltip', data-popup='tooltip-custom', data-bs-placement='top', title='Christina Parker')
                                                         img.rounded-circle(src='/assets/img/avatars/7.png', alt='Avatar')
                                             td
-                                                span.badge.bg-label-info.me-1 Scheduled
+                                                span.badge.bg-label-info.me-1 archived
                                             td
                                                 .dropdown
                                                     button.btn.p-0.dropdown-toggle.hide-arrow(type='button', data-bs-toggle='dropdown')
@@ -168,7 +170,7 @@ block content
                                             td
                                                 i.fab.fa-bootstrap.fa-lg.text-primary.me-3
                                                 |  
-                                                strong url 4
+                                                strong foo@example.com
                                             td name 4
                                             td
                                                 ul.list-unstyled.users-list.m-0.avatar-group.d-flex.align-items-center
@@ -179,7 +181,7 @@ block content
                                                     li.avatar.avatar-xs.pull-up(data-bs-toggle='tooltip', data-popup='tooltip-custom', data-bs-placement='top', title='Christina Parker')
                                                         img.rounded-circle(src='/assets/img/avatars/7.png', alt='Avatar')
                                             td
-                                                span.badge.bg-label-warning.me-1 Pending
+                                                span.badge.bg-label-warning.me-1 spammed
                                             td
                                                 .dropdown
                                                     button.btn.p-0.dropdown-toggle.hide-arrow(type='button', data-bs-toggle='dropdown')
@@ -194,7 +196,7 @@ block content
                     // / Total Revenue
                     .col-12.col-md-8.col-lg-4.order-3.order-md-2
                         .row
-                            .col-6.mb-4
+                            .col-6.mb-4#outlook
                                 .card
                                     .card-body
                                         .card-title.d-flex.align-items-start.justify-content-between
@@ -212,7 +214,7 @@ block content
                                         small.text-danger.fw-semibold
                                             //- i.bx.bx-down-arrow-alt
                                             //- |  item b
-                            .col-6.mb-4
+                            .col-6.mb-4#yandex
                                 .card
                                     .card-body
                                         .card-title.d-flex.align-items-start.justify-content-between
@@ -242,4 +244,5 @@ block content
                                                     h5.text-nowrap.mb-2 important Report
                                                     span.badge.bg-label-warning.rounded-pill Year 2022
         include _scripts
+        script(src='/assets/js/dash_main.js')
 

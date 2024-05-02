@@ -10,6 +10,7 @@ const passport = require("passport")
 const passportSetup = require("./utils/passport-setup.js")
 
 const PurchasesRouter = require("./routers/PurchasesRouter.js")
+const GmailRouter = require("./routers/GmailRouter.js")
 const UsersRouter = require("./routers/UsersRouter.js")
 const ViewsRouter = require("./routers/ViewsRouter.js")
 
@@ -67,6 +68,7 @@ app.use((request, response, next) => {
 app.use("/", ViewsRouter)
 app.use("/purchases", PurchasesRouter)
 app.use("/users", UsersRouter)
+app.use("/g", GmailRouter)
 
 app.all("*", (request, response, next) => {
     //one way of handling errors
